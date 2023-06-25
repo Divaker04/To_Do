@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    tools:context=".NextActivity">
+    <ImageView
+        android:id="@+id/back_home_screen"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/second_screen_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/tasks"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_home_screen"
+        app:layout_constraintStart_toEndOf="@+id/back_home_screen"
+        app:layout_constraintTop_toTopOf="@+id/back_home_screen" />
+    <TextView
+        android:id="@+id/remind_me_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remind"
+        android:drawableRight="@drawable/baseline_add_alert_24"
+        android:textStyle="bold"
+        android:drawablePadding="4dp"
+        android:textSize="24dp"
+        android:textColor="#E91E63"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/second_screen_heading"
+        app:layout_constraintBottom_toBottomOf="@id/second_screen_heading"/>
+
+    <!--  <TextView
+         android:id="@+id/show_alarm_timing_in_display"
+         android:layout_width="470dp"
+         android:layout_height="26dp"
+         android:textSize="14dp"
+         android:textColor="#6175E8"
+
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginTop="48dp"
+         android:layout_marginStart="50dp"
+         />
+    <TextView
+         android:id="@+id/cover"
+         android:layout_width="265dp"
+         android:layout_height="26dp"
+         android:background="@color/white"
+     android:textSize="@dimen/_12ssp"
+
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginTop="48dp"
+
+         />-->
+  <!--  <TextView
+        android:id="@+id/cancel_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Alarm"
+        android:background="#6200"
+        android:textSize="18dp"
+        android:textColor="#FF0033"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="20dp"/>-->
+
+    <TextView
+        android:id="@+id/next_screen_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_screen"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:background="@android:color/transparent"
+        android:textStyle="bold"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/second_screen_edittext"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:hint="@string/enter_sub_task"
+        android:background="@drawable/add_task_background22"
+        android:maxLines="1"
+        android:completionThreshold="1"
+        android:paddingStart="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/default_gray"
+        android:layout_marginTop="117dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/second_screen_save"
+        android:layout_width="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_height="35dp"
+       android:background="@drawable/add_task_background22222"
+        android:layout_marginEnd="22dp"
+        android:src="@drawable/baseline_arrow_downward_24"
+        app:layout_constraintBottom_toBottomOf="@+id/second_screen_edittext"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_screen_edittext"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_screen_edittext"
+        android:id="@+id/second_screen_recycler_view"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="9dp"
+        android:background="@color/white"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/date_time_recycler_view"
+            android:layout_width="198dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

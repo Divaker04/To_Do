@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">To_Do</string>
+    <string name="next_screen">Next Screen</string>
+    <string name="enter_sub_task">Enter sub task</string>
+    <string name="tasks">Tasks</string>
+    <string name="delete">Delete</string>
+</resources>
